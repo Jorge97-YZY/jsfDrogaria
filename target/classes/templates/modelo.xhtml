@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>SiGDro</title>
+	<h:outputStylesheet library="css" name="estilos.css"/>
+</h:head>
+<h:body>
+<p:growl id="mensagem" />
+
+	<div id="geral">
+		<div id="topo" class="divTopo">
+			<p:graphicImage library="images" name="logotipo.png" styleClass="imagemCentralizada"/>
+		
+		</div>
+		
+		<div id="cabecalho" class="divCabecalho">
+		<h:form id="formMenu">
+			<p:menubar>
+				<p:submenu label="Arquivo" icon="fa fa-folder-open">
+					<p:menuitem value="Sair" icon="fa fa-close"/>
+				
+				</p:submenu>
+				
+				<p:submenu label="Cadastros" icon="fa fa-file-text">
+					<p:menuitem value="Estado" url="/pages/estados.xhtml" icon="fa fa-bank"/>
+					<p:menuitem value="Cidade" url="/pages/cidades.xhtml" icon="fa fa-building"/>
+					<p:menuitem value="Fabricante" url="/pages/fabricante.xhtml" icon="fa fa-cogs"/>
+					<p:menuitem value="Produto" url="/pages/produtos.xhtml" icon="fa fa-shopping-cart"/>
+					<p:menuitem value="Pessoa" url="/pages/pessoas.xhtml" icon="fa fa-users"/>
+					<p:menuitem value="Cliente" url="/pages/clientes.xhtml" icon="fa fa-user-plus"/>
+					<p:menuitem value="Funcionario" url="/pages/funcionarios.xhtml" icon="fa fa-user-secret"/>
+				</p:submenu>
+				
+				<p:submenu label="Movimentações" icon="fa fa-cart-plus">
+					<p:menuitem value="Venda" url="/pages/vendas.xhtml" icon="fa fa-cart-arrow-down"/>
+				
+				</p:submenu>
+				
+				<p:submenu label="Ajuda" icon="fa fa-question-circle">
+					<p:menuitem value="Sobre" icon="fa fa-info-circle"/>
+				
+				</p:submenu>
+			</p:menubar>
+			</h:form>
+		</div>
+		
+		<div id="conteudo">
+		
+		<ui:insert name="conteudo"/>  
+		
+		</div>
+	</div>
+	
+</h:body>
+</html>

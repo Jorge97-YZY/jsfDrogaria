@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="estados" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="006144ff-f039-43eb-9da0-30f7a278e65d">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[ZHJvZ2FyaWEuZXN0YWRvIEFTICw0Nyw1MCxjNzQyMGE3ZS0yZjAxLTRlZDMtYjg1My1lYjAwNWE4
+NjRhZDQ7]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Drogaria Data Adapter "/>
+	<style name="Table_TH" mode="Opaque" backcolor="#DCDCDC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#FAEEED">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Drogaria" uuid="9944a0ee-5f75-4ef9-b743-861d8a7c2a52">
+		<property name="com.jaspersoft.studio.data.sql.tables">
+			<![CDATA[ZHJvZ2FyaWEuZXN0YWRvIEFTICwyMDUsMTE4LGU0NGZhZjgxLTUwMWYtNDRlNS05YTBhLWNmNmU0
+M2IyYjU0Zjs=]]>
+		</property>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Drogaria Data Adapter "/>
+		<queryString language="SQL">
+			<![CDATA[SELECT drogaria.estado.nome,
+	drogaria.estado.sigla
+FROM drogaria.estado
+ORDER BY drogaria.estado.nome ASC]]>
+		</queryString>
+		<field name="nome" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="nome"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="estado"/>
+		</field>
+		<field name="sigla" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="sigla"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="estado"/>
+		</field>
+		<group name="nome">
+			<groupExpression><![CDATA[$F{nome}]]></groupExpression>
+		</group>
+		<group name="sigla">
+			<groupExpression><![CDATA[$F{sigla}]]></groupExpression>
+		</group>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT drogaria.estado.nome,
+	drogaria.estado.sigla
+FROM drogaria.estado
+ORDER BY drogaria.estado.nome ASC]]>
+	</queryString>
+	<field name="nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="estado"/>
+	</field>
+	<field name="sigla" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="sigla"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="estado"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="99" splitType="Stretch">
+			<image hAlign="Left" vAlign="Middle">
+				<reportElement x="0" y="0" width="330" height="99" uuid="c353a700-afd2-4d3d-8ead-775aa0d37c6e"/>
+				<imageExpression><![CDATA["src/main/webapp/resources/images/logotipo.png"]]></imageExpression>
+			</image>
+			<textField pattern="MMMMM dd, yyyy ">
+				<reportElement x="460" y="9" width="95" height="22" uuid="1baca95c-c8b8-4bf4-a095-52535beaa3f0"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm:ss">
+				<reportElement x="460" y="38" width="95" height="23" uuid="c79438c1-d170-4d98-8c57-a6b81c087dc0"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="427" y="9" width="55" height="21" uuid="8376772b-d164-48a0-854f-dbeb18fc5b6d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="427" y="38" width="55" height="21" uuid="4fe2dd87-cef5-4839-bf54-6f24a7cd7b10"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="46" uuid="d783787d-55fc-4c1c-9a38-fbcf34612453"/>
+				<textElement textAlignment="Center">
+					<font fontName="Agency FB" size="26" isBold="true" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Relatorio de Estados]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="120" height="30" uuid="41ea86ef-3bae-4f00-a21c-6c2c1df48793">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c49744ca-e439-4635-93ca-8a3ebff97d13"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[  Nome do Estado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="299" y="0" width="100" height="30" uuid="bd051191-14b3-49e4-9195-d2db3532f41b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="972f1508-2c8b-4069-bfa9-998ad5f00256"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[  Sigla]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="0" width="100" height="30" uuid="f1266ec4-b64b-4596-b674-21c3b34163eb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c49744ca-e439-4635-93ca-8a3ebff97d13"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[   $F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="0" width="100" height="30" uuid="30758145-3406-498a-bd5b-386f5d8878e0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="972f1508-2c8b-4069-bfa9-998ad5f00256"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[  $F{sigla}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50">
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="10" width="555" height="40" uuid="522ec991-1dac-436a-beb4-af6045b96436"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Agency FB" size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Rua da Mochiqueira - Tel Nº:+(244)929195723, Huila/Lubango]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
